@@ -6,8 +6,6 @@ function getComputerChoice(choices){
     return choices[choice];
 }
 
-
-
 let playerPoints = 0;
 let computerPoints = 0;
 
@@ -57,7 +55,7 @@ function startRound(playerSelection, computerSelection){
 }
 
 
-
+//Round is logged to the console
 function game(){
     console.log(startRound(playerSelection, computerSelection));
     console.log(startRound(playerSelection, computerSelection));

@@ -18,8 +18,9 @@ function startRound(playerSelection, computerSelection){
         computerSelection = getComputerChoice(compChoices);
         playerSelection = prompt("pick something").toLowerCase();
 
-    if (playerSelection === computerSelection){
-            return "Tie, Repeat again";
+    if (playerSelection == computerSelection){
+            console.log("Tied")
+            return startRound(playerSelection, computerSelection);
     }   else if (playerSelection == "rock" && computerSelection == "paper"){
             computerPoints = computerPoints+1;
             return "You Lose! Paper beats Rock";
@@ -62,6 +63,13 @@ function game(){
     console.log(startRound(playerSelection, computerSelection));
     console.log(startRound(playerSelection, computerSelection));
     console.log(startRound(playerSelection, computerSelection));
+
+    if (playerPoints >= 3){
+        console.log("You Win")
+    }
+    else if (computerPoints >=3){
+        console.log("You Lose")
+    }
 }
 
 game();
